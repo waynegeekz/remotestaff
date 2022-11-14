@@ -1,0 +1,435 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*STYLES*/
+body{
+        margin: 0;
+        background: #1C313C;
+        color: white;
+        font-family: Arial;
+}
+
+p {
+	line-height: 1.6em;
+	margin-bottom: 1em;
+}
+
+.svgContainer {
+	display: none;
+	justify-content: center;
+	align-items: stretch;
+	position: absolute;
+	z-index: -1;
+	top: 275px;
+	left: 0;
+	width: 100vw;
+}
+
+.container {
+	max-width: 1344px;
+	margin: 100px auto 100px auto;
+	padding: 2em;
+}
+
+    .row--right {
+	display: flex;
+	flex-flow: column-reverse;
+    }
+
+
+
+
+
+
+
+
+.featImg {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2.5em;
+	z-index: 0;
+}
+
+
+    .featImg__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		max-width: 90%;
+	}
+
+    .featImg__img {
+		z-index: 1;
+		max-width: 100%;
+		max-height: 550px;
+	}
+
+
+
+
+
+.details {
+    position: relative;
+    z-index: 10;
+}
+
+
+    .details div {
+	margin-bottom: .9rem;
+	}
+    
+    .details__label {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	color: #50CDC8;
+	font-weight: bold;
+    }
+
+    .details__title {
+	font-weight: bold;
+	font-size: 2.2em;
+	line-height: 1.3em;
+	}
+
+    .details__description {
+	font-size: 1.3em;
+	line-height: 1.6em;
+	}
+
+
+
+
+
+
+.row {
+	margin-bottom: 6rem;
+	position: relative;
+}
+
+
+    .row--video .featImg__bg {
+		top: -80px;
+    }
+
+	.row--tech .featImg {
+		margin-bottom: 0;
+	}
+
+	.row--tech .featImg__img {
+		margin-left: -80px;
+	}
+
+	.row--tech .featImg__bg {
+		width: 80%;
+		height: auto;
+		left: 40px;
+		top: 80px;
+	}
+
+	.row--hand .featImg__img, .row--recommend .featImg__img{
+		height: 200px;
+		width: auto;
+	}
+
+	.row--app .featImg__bg {
+		opacity: .7;
+	}
+
+	.row--literacy .featImg__bg {
+		opacity: .7;
+	}
+
+
+
+
+/*TABLET RESPONSIVENESS*/
+@media screen and (min-width: 768px) {
+	
+.row {
+	margin-bottom: 10em;
+}
+	.row--video .featImg__bg {
+		width: 70% !important;
+	}
+	.row--app .featImg__bg {
+
+	}
+
+
+
+
+.featImg__bg {
+	width: auto !important;
+	left: auto !important;
+	height: 500px !important;
+}
+
+}
+
+
+
+
+
+/*DESKTOP VERSION*/
+@media screen and (min-width:1344px) {
+
+.svgContainer {
+	display: flex;
+}
+
+	.svgContainer svg {
+		width: 70%;
+	}
+
+img {
+	width: 100%;
+	height: auto;
+	max-height: none !important;
+}
+	
+.container {
+	margin: 400px auto 0 auto;
+	padding: 0;
+}
+
+.row {
+	display: flex !important;
+	flex-flow: unset;
+}
+
+
+	.col {
+		flex: 0 0 50%;
+	}
+
+	.details {
+		box-sizing: border-box;
+	}
+
+	.row--right .details {
+		padding-right: 5em; 
+	}
+
+	.row--left .details {
+		padding-left: 4em; 
+	}
+
+
+
+
+
+.row--video {
+	margin-bottom: 25em;
+}
+
+
+	.row--video .details {
+		padding-left: 70px;
+		padding-right: 4em;
+	}
+
+	.row--video .details__title {
+		font-weight: normal;
+	}
+
+	.row--video .details__title span {
+		display: block;
+		font-weight: bold;
+	}
+
+	.row--video .details__description {
+		margin-top: 5rem;
+		line-height: 1.6em;
+	}
+
+	.row--video .featImg__img {
+		height: 350px;
+		width: auto;
+	}
+
+	.row--video .featImg__bg {
+		top: -200px;
+		left: 150px !important;
+		height: 675px !important;
+		width: auto !important;
+		max-width: none;
+	}
+
+
+
+
+.row--tech {
+	margin-bottom: 7em;
+}
+
+
+	.row--tech .featImg__bg {
+		height: 500px;
+		width: auto !important;
+		opacity: .4;
+		left: -50px !important;
+	}
+
+	.row--tech .featImg__img {
+		height: 660px;
+		width: auto;
+		margin-top: -120px;
+		margin-left: -250px;
+	}
+
+
+
+
+
+.row--literacy {
+	margin-bottom: 8em;
+}
+
+
+	.row--literacy .featImg__bg {
+		height: 500px;
+		width: auto !important;
+		top: 50px;
+		left: 20px !important;
+	}
+	
+	.row--literacy .featImg__img {
+		height: 575px;
+	}
+
+
+
+
+
+.row--app {
+	margin-bottom: 13em;
+}
+
+
+    .row--app .featImg__bg {
+		top: -70px;
+		left: -90px !important;
+		height: 550px;
+		width: auto !important;
+		max-width: none;
+	}
+	.row--app .featImg__img {
+		height: 415px;
+		width: auto;
+	}
+
+
+
+
+
+.row--support {
+	margin-bottom: 25em;
+}
+
+
+	.row--support .featImg__img {
+		margin-left: -288px;
+		margin-top: 82px;
+		height: 130px;
+		width: auto;
+		max-width: none;
+		max-height: none;
+	}
+
+
+
+
+
+.row--hand {
+	margin-bottom: 20em;
+}
+
+
+	.row--hand .featImg__img {
+		width: auto;
+		height: 450px;
+		margin-left: -120px;
+		margin-top: -20px;
+	}
+
+
+
+
+
+.row--recommend {
+	margin-bottom: 44em;
+}
+
+
+	.row--recommend .featImg__img {
+		margin-left: -100px;
+	}
+
+
+
+
+
+.row--download {
+	align-items: center;
+}
+
+
+	.row--download .featImg__img {
+		height: 800px;
+		width: auto;
+		margin: 3px 0 0 -4px;
+	}
+
+
+
+
+}
